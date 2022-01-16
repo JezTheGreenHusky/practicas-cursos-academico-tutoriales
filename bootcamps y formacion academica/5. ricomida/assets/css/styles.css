@@ -1,0 +1,236 @@
+/* font-family: 'Cabin', sans-serif;
+font-family: 'Lobster', cursive; */
+
+body {
+    font-family: 'Cabin', sans-serif;
+    color: #373A3C;
+}
+
+.loboster {
+    font-family: 'Lobster', cursive;
+}
+.bold {
+    font-weight: bold;
+}
+/*======================
+-----------nav bar-----------
+======================*/
+
+#toggle-botones{
+    white-space: nowrap;
+    font-family: 'Cabin', sans-serif;
+    color: #ffffff;
+}
+
+#navbar{
+    background-color: #373A3C;
+}
+
+.navbar-brand{
+    font-size: 37px;
+}
+
+.navbar-nav{
+    font-family: 'Cabin', sans-serif;
+    color: #ffffff;
+}
+/*======================
+-----------header-----------
+======================*/
+.linea {
+    border-bottom: 1px solid black;
+    margin: 20px 0px;
+    margin-bottom: 0px;
+}
+.header_contenido img {
+    width: 100%;
+    padding: 5%;
+}
+.header_contenido h2 {
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    width: 80%;
+    margin: 0 auto;
+}
+.header_contenido h4 {
+    font-size: 16px;
+}
+
+
+.botones_header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.botones_header button {
+    border: 1px solid #DDDDDD;
+    font-size: 13px;
+}
+
+@media (min-width: 768px) {
+    .header_contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .header_contenido img {
+        padding:2%;
+    }
+    .botones_header {
+        justify-content: start;
+        gap: 20px;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .info h2 {
+        font-size: 40px;
+        margin: 0px;
+        width: 60%;
+    }
+    .info h4 {
+        font-size: 20px;
+    }
+}
+/*======================
+-----------carousel-----------
+======================*/
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px; /* change width */
+    height: 10px; /* change height */
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #373A3C31;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border-radius: 100%; /* add border-radius */
+    margin-bottom: -15%;
+}
+#carouselExampleIndicators {
+    position: relative;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: -15%;
+}
+.carousel-indicators .active {
+    background-color: #373A3C;
+    opacity: 1;
+}
+/*======================
+-----------receta / preparacion-----------
+======================*/
+#preparacion {
+    border-top: none;
+    border-bottom: none;
+    padding: 25px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#preparacion p {
+    font-size: 16px;
+}
+.subtitulo {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: none;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+    #preparacion {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .subtitulo {
+        border-bottom: 1px solid black;
+        font-size: 20px;
+    }
+    #preparacion p {
+        font-size: 20px;
+    }
+}
+/*======================
+-----------cards / recetas relacionadas-----------
+======================*/
+#relacionadas {
+    margin-bottom: 30px;
+}
+
+#relacionadas h2 {
+    font-size: 25px;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+}
+.card {
+    height: 100%;
+}
+@media (min-width: 768px) {
+    #relacionadas h2 {
+        font-size: 40px;
+    }
+}
+/*======================
+-----------suscribete-----------
+======================*/
+.suscribete {
+    height: 448px;
+}
+#suscribete-contenido {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#suscribete-contenido h2 {
+    font-size: 30px;
+}
+#suscribete-contenido h3 {
+    font-size: 20px;
+}
+#suscribete-contenido button {
+    border: 1px solid white;
+    padding: 2% 20%;
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    #suscribete-contenido button {
+        border: 1px solid white;
+        padding: 1% 10%;
+        margin-top: 50px;
+    }
+    #suscribete-contenido h2 {
+        font-size: 40px;
+    }
+    #suscribete-contenido h3 {
+        font-size: 30px;
+    }
+}
+@media (min-width: 768px) {
+    .suscribete {
+        height: 534px;
+    }    
+}
+
+/*======================
+-----------footer-----------
+======================*/
+
+.pie-pagina{
+    background-color: #373A3C;
+    font-size: 37px;
+}

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;;
+}
+
+
+.navbar {
+    background-color: #e83e8c;
+}
+.navbar-brand img {
+    width: 132px;
+}
+
+#navbarNav {
+    justify-content: end;
+}
+.nav-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*======================
+-----------productos-----------
+======================*/
+.productos__titulo {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    color: #707070;
+
+    margin-top: 41px;
+    margin-bottom: 29px;
+}
+
+@media (min-width: 768px) {
+    .productos__titulo {
+        margin-top: 64px;
+        margin-bottom: 77px;
+    }
+}
+
+.row {
+    margin-bottom: 64px; /*118*/
+    margin: 0 auto;
+    width: 90%;
+}
+
+.card {
+    margin: 2rem auto;
+}
+
+.card-title {
+    color: #373A3C;
+    font-size: 17px;
+    font-weight: 700;
+}
+.card-text {
+    color: #373A3C;
+    font-size: 16px;
+    font-weight: 400;
+}
+.card-text {
+    height: 180px;
+}
+/*======================
+-----------pago/ tarjetas-----------
+======================*/
+.metodo-pago {
+    margin-top: 54px;
+    background-color: #17A2B8;
+    height: 170px;
+
+    gap: 4rem;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+.metodo-pago p {
+    text-align: center;
+    margin: 0;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 1.5rem;
+}
+.tarjetas i {
+    font-size: 55px;
+}
+
+footer {
+    background-color: #e83e8c;
+    height: 184px;
+    margin: 0 auto;
+}
+
+footer img {
+    width: 53px;
+    padding: 53px 0;
+
+}
