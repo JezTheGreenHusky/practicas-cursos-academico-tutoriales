@@ -1,0 +1,258 @@
+:root {
+    --primario: #9C27B0;
+    --primario-oscuro: #89119d;
+    --secundario: #FFCE00;
+    --secundario-oscuro: rgb(233, 287, 2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuente-principal: 'Staatliches', cursive;
+
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Se agrega aparte --> 1rem == 10px */
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* globales */
+  body {
+      background-color: var(--primario);
+      font-size: 1.6rem;
+      line-height: 1.5; /*Interlineado*/
+  }
+
+  p {
+      font-size: 1.8rem;
+      font-family: Arial, Helvetica, sans-serif; /*Recomendado en todo*/
+      color: var(--blanco);
+  }
+
+  a {
+      text-decoration: none; /*Recomendado en todo (elimina la linea de los enlaces)*/
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  .contenedor {
+      max-width: 120rem; /*tamaño del contenido principal*/
+      margin: 0 auto; /*permite centrar el contenido*/
+  }
+
+  h1, h2, h3 {
+      text-align: center; /*centrar titulos*/
+      color: var(--secundario);
+      font-family: var(--fuente-principal);
+  }
+
+  h1 {
+      font-size: 4rem;
+  }
+  h2 {
+      font-size: 3.2rem;
+  }
+  h3 {
+      font-size: 2.4rem;
+  }
+
+  /*
+  FIN Globales
+
+  Inicio bloques
+  */
+/*HEADER*/
+.header {
+    display: flex;
+    justify-content: center; /*centrar horizontalmete*/
+}
+
+.header__logo {
+    margin: 3rem 0; /* 3rem arriba y abjo / 0 izq der */
+}
+
+/*footer*/
+.footer {
+    background-color: var(--primario-oscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto{
+    font-family: var(--fuente-principal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/*Navegacion*/
+.navegacion {
+    background-color: var(--primario-oscuro);
+    padding: 1rem 0; /*agranda el elemento arriba y abajo*/
+
+    display: flex; /*centra los enlaces (hijos)*/
+    justify-content: center; /*centra los enlaces (hijos)*/
+
+    gap: 2rem; /*separa los elementos hijos en 2 rem*/
+    /*tambien se puede agregar un margin-right y un pseudo selector: que selecciona el ultimo elemnto hijo*/
+    /* .navegacion__enlace:first-of-type */
+}
+.navegacion__enlace {
+    font-family: var(--fuente-principal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    /*permite cambiar el color cuando el cursor pasa sobre el*/
+    color: var(--secundario);
+}
+/* grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Productos */
+.producto {
+    background-color: var(--primario-oscuro);
+    padding: 1rem;
+}
+.producto__imagen {
+    width: 100%; /*imagenes que se adaptan, tomando el espacio disponible en el grid*/
+}
+.producto__nombre {
+    font-size: 4rem;
+}
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuente-principal);
+    margin: 1rem 0rem;
+    text-align: center;
+    line-height: 1.2; /*interlineado*/
+}
+
+/* graficos */
+
+.grafico {
+    min-height: 30rem; /*para ver en celular (por ser imagen background)*/
+    background-size: cover;
+
+}
+.grafico--camisas {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node {
+    grid-column: 1 / 3;
+    grid-row: 8 / 9;
+    background-image: url(../img/grafico2.jpg);
+}
+
+@media (min-width: 768px) {
+    /* Por usar valores de columna mayores al definido*/
+    .grafico--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/*
+NOSOTROS.html 
+*/
+.nosotros {
+    display: grid;
+    grid-row: repeat(2, auto); /* auto es muy util con imagen y texto */
+}
+@media (min-width: 768px) {
+    /* primero texto, luego imagen */
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem; /*separacion izq-der*/
+    }
+}
+
+.nosotros__imagen {
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.bloque {
+    text-align: center;
+}
+.bloque__titulo {
+    margin: 0rem;
+}
+.bloque__imagen {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+.formulario__campo {
+    border-color: var(--primario-oscuro);
+    border-width: 1rem; /*ancho*/
+    border-style: solid;
+    /*= border: 1rem solid var(--primario-oscuro*/
+
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    appearance: none;
+}
+.img--producto {
+    width: 100%;
+}
+.formulario__submit {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuente-principal);
+    padding: 2rem;
+    transition: background-color 2s ease; /*Transicion de el color del hover siguente*/
+    grid-column: 1 / 3;
+}
+.formulario__submit:hover {
+    cursor: pointer; /* cambiar la apariencia al pasar el cursor*/
+    background-color: var(--secundario-oscuro);
+}

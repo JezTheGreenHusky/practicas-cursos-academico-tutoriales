@@ -1,0 +1,386 @@
+/* 
+Para esta tarea, use la metodologia "BEM" y "mobile first"
+
+Tambien se ocupo "noramlize.css" para mejorar la visualizacion en todos los browsers
+*/
+
+:root {
+    /* Paleta de colores */
+    --primario: rgba(207, 150, 26, 0.6);
+    --secundario: rgba(174, 207, 26, 0.6);
+    --blanco: rgb(255, 255, 255);
+    --negro: rgb(0, 0, 0);
+    --gris: rgb(75, 75, 75);
+
+    /* fuentes */
+    --font1: 'Open Sans', sans-serif;
+    --font2: 'PT Sans', sans-serif;
+}
+
+/* Para que 1rem = 10px: */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+/* normalizando la caja */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*======================
+-----------UTILIDADES-----------
+======================*/
+
+.center {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+
+
+/*======================
+-----------GLOBALES-----------
+======================*/
+html {
+    scroll-behavior: smooth;
+
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: var(--font1); /*Fuente por defecto*/
+    color: var(--blanco);
+    line-height: 1.3;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font2);
+    text-align: center;
+}
+h1 {
+    font-size: 2.9rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+p {
+    margin: 0rem;
+}
+
+/*======================
+-----------Diapositiva 1 / HEADER-----------
+======================*/
+
+.diapo1 {
+    scroll-snap-align: start;
+    background-image: 
+        linear-gradient(
+            var(--primario),
+            var(--secundario)
+            ),
+        url(../img/header2.webp);
+    background-size: 250%;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-attachment: fixed;
+
+    height: 100vh; /*Ocupa todo el view port*/
+
+    /* ANIMACION */
+    animation: fondo_header 18s infinite ease-in-out;
+}
+@keyframes fondo_header {
+    0% {
+        background-position: 60%; /*tiene que ser igual al del 100%*/
+    }
+    50% {
+        background-position: 90%;
+    }
+    100% {
+        background-position: 60%;
+    }
+}
+
+
+@media (min-width: 1080px) {
+    .diapo1 {
+        background-size: 140%;
+        background-position: 50% 10%;
+
+        /* height: 80rem; */
+        height: 100vh;
+
+        /* ANIMACION */
+    animation: fondo_header 15s infinite ease-in-out;
+    }
+    @keyframes fondo_header {
+        0% {
+            background-position: 10%; /*tiene que ser igual al del 100%*/
+        }
+        50% {
+            background-position: 50%;
+        }
+        100% {
+            background-position: 10%;
+        }
+    }
+}
+
+.header {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-auto-flow: column;
+}
+
+.header__texto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+@media (min-width: 1080px) {
+    .header__texto {
+        grid-column: 2/4;
+        grid-row: 4/6;
+    }
+}
+.header__titulo {
+    margin-bottom: .5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.header__texto--descripcion {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+@media (min-width: 1080px) {
+    .header__titulo {
+        font-size: 5rem;
+    }
+    .header__texto--descripcion {
+        font-size: 3.1rem;
+    }
+}
+/*======================
+-----------REDES SOCIALES-----------
+======================*/
+
+.header__redes {
+    display: flex;
+    align-items: flex-end;
+    padding: 0rem;
+    gap: .5rem;
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 5rem;
+
+
+    font-size: 1.4rem;
+    transform-origin: center center;
+    transform: translatex(50%) translateY(-50%) rotate(-90deg); /*Para dar vuleta las redes*/
+
+    grid-column: 2/7;
+    grid-row: 2/3;
+}
+@media (min-width: 1080px) {
+    .header__redes {
+        grid-column: 3/7;
+        grid-row: 2/3;
+
+        font-size: 1.6rem;
+    }
+}
+.header__redes--texto {
+    padding: .3rem;
+}
+.bx {
+    padding: .3rem;
+    padding-bottom: 0rem
+}
+
+.header__boton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+    grid-column: 3/5;
+    grid-row: 7/8;
+
+    position: relative;
+}
+
+.header__boton--texto {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+@media (min-width: 1080px) {
+    .header__boton--texto {
+        font-size: 2rem;
+    }
+}
+
+.header__boton--icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /*Centrar*/
+    animation: icono 4s infinite ease;
+    padding: 1.5rem .5rem;
+    padding-top: 0rem;
+}
+
+@keyframes icono {
+    0% {
+        bottom: 1.5rem;
+    }
+    50% {
+        bottom: -1rem;
+    }
+    100% {
+        bottom: 1.5rem;
+    }
+}
+.icon {
+    font-size: 4rem;
+}
+
+/*======================
+-----------Cotizar / Formulario / diapo 2-----------
+======================*/
+.diapo2 {
+    scroll-snap-align: start;
+    background-image: 
+        linear-gradient(
+            var(--primario) 30%,
+            var(--secundario) 90%
+            ),
+        url(../img/formulario2.webp);
+    background-size: 250%;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-attachment: fixed;
+    /* height: 80rem; */
+    height: 100vh;
+
+    /* ANIMACION */
+    animation: fondo_formulario 18s infinite ease-in-out;
+}
+@keyframes fondo_formulario {
+    0% {
+        background-position: 60%; /*tiene que ser igual al del 100%*/
+    }
+    50% {
+        background-position: 90%;
+    }
+    100% {
+        background-position: 60%;
+    }
+}
+
+/*======================
+-----------cotizar texto-----------
+======================*/
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+}
+@media (min-width: 1080px) {
+    .cotizar {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.cotizar__texto {
+    margin: 1rem auto;
+    padding: 1rem;
+    flex-basis: 50%;
+}
+.cotizar__texto--titulo {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+.cotizar__texto--descripcion {
+    font-size: 1.2rem;
+}
+@media (min-width: 1080px) {
+    .cotizar__texto--titulo {
+        font-size: 4.8rem;
+    }
+    .cotizar__texto--descripcion {
+        font-size: 1.7rem;
+    }
+}
+.cotizar__formulario {
+    flex-basis: 40%;
+    flex-grow: 0.5;
+    background-color: rgba(255, 255, 255, .34);
+    border: 1px inset rgba(63, 63, 63, 0.7);
+    border-radius: 1rem;
+}
+.formulario {
+    padding: 1.5rem;
+}
+.formulario__item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: .5rem;
+}
+.formulario__item label {
+    font-weight: bold;
+}
+.formulario__item input,
+.formulario__item select,
+.formulario__item textarea{
+    border-radius: 1rem;
+    border: none;
+    font-family: var(--font2);
+    font-size: 1.4rem;
+    padding: .5rem .8rem;
+    color: var(--gris);
+    background-color: rgba(255, 255, 255, .64);
+}
+
+.formulario {
+    position: relative;
+    padding-bottom: 3.5rem;
+}
+.boton {
+    background-color: var(--negro);
+    border: none;
+    color: var(--blanco);
+    border-radius: 1rem;
+    padding: .8rem 2.5rem;
+    font-family: var(--font1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.boton:hover {
+    background-color: var(--gris);
+}

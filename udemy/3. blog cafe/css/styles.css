@@ -1,0 +1,250 @@
+
+
+:root {
+    --f_header: 'PT Sans', sans-serif;
+    --f_parrafo: 'Open Sans', sans-serif;
+
+    --primario: #784d3c;
+    --blanco: #FFF;
+    --gris: #e1e1e1;
+    --negro: #000;   
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Se agrega aparte --> 1rem == 10px */
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+      font-family: var(--f_parrafo);
+      font-size: 1.6rem;
+      line-height: 2;
+  }
+a {
+    text-decoration: none;
+}
+.contenedor {
+    max-width: 120rem;
+    width: 90%; /*para que el texto no toque las orillas en celulares*/
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3, h4 {
+    font-family: var(--f_header);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+  /* utilidades */
+
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/* HEADER */
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+.header {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .header__texto {
+      text-align: center;
+      color: var(--blanco);
+      margin-top: 5rem;
+  }
+  .barra {
+      padding-top: 4rem;
+  }
+  @media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between; /*un elemneto a la der y otro a izq, flex*/
+        align-items: center; /*alinea en eje Y, flex*/
+    }
+    .header__texto {
+        margin-top: 15rem;
+    }
+  }
+  .logo {
+      color: var(--blanco);
+  }
+  .logo__nombre {
+      font-weight: 400;
+  }
+  .logo__bold {
+      font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+  }
+  .navegacion__enlace {
+      display: block; /*cintenido arriba hacia abajo*/
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--blanco);
+  }
+
+  @media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+  }
+  .entrada {
+      border-bottom: 1px solid var(--gris);
+      margin-bottom: 2rem;
+  }
+  .entrada:last-of-type {
+      /* Selecciona la utima entrada */
+      border: none;
+      margin-bottom: 0;
+  }
+  .boton {
+      display: block;
+      font-family: var(--f_header);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1rem 3rem;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 700; /*texto en "negritas*/
+      margin-bottom: 2rem;
+      border: none;
+  }
+  @media (min-width: 768px) {
+      .boton {
+          display: inline-block;
+      }
+  }
+.boton:hover {
+    cursor: pointer; /*aparece la mano que indica que es un boton*/
+}
+
+  .boton--primario {
+      background-color: var(--negro);
+  }
+  .boton--secundario {
+      background-color: var(--primario);
+  }
+  .cursos {
+      list-style: none;
+  }
+
+  .widget-curso {
+      border-bottom: 1px solid var(--gris);
+      margin-bottom: 2rem;
+  }
+  .widget-curso:last-of-type {
+      border: none;
+      margin-bottom: 0;
+  }
+  .widget-curso__label {
+      font-family: var(--f_header);
+      font-weight: bold;
+  }
+  .widget-curso__info {
+      font-weight: normal;
+  }
+  .widget-curso__label,
+  .widget-curso__info {
+      font-size: 2rem;
+  }
+
+  /* footer */
+  .footer {
+      background-color: var(--negro);
+      padding-bottom: 3rem;
+      margin-top: 4rem;
+  }
+
+  /* SObre nosotros html */
+
+  @media (min-width: 768px) {
+      .sobre-nosotros {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 4rem;
+          align-items: center;
+      }
+  }
+
+  .curso {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--gris);
+  }
+
+  @media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+  }
+
+  .curso:last-of-type {
+      border: none;
+  }
+
+  /* Contacto */
+
+  .contacto-bg {
+      background-image: url(../img/contacto.jpg);
+      height: 40rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .formulario {
+      background-color: var(--blanco);
+      margin: -5rem auto 0 auto; /*solapar con la imagen*/
+      width: 95%;
+  }
+
+  .campo {
+      display: flex;
+      margin-bottom: 2rem;
+  }
+  /*Esto permite que el campo label tenga un valor fijo de 9 rem*/
+  .campo__label {
+      flex: 0 0 9rem; /*factor de crecimiento | de reduccion | valor fijo*/
+      /* text-aling: right;
+      padding-right: 2rem;
+       */
+  }
+/* Esto permite que el espacio para rellenar tome todo el resto de espacio disponible */
+  .campo__field {
+      flex: 1; /*factor de crecimiento*/
+      border: 1px solid var(--gris);
+  }

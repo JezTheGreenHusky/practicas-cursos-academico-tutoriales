@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <meta name="description" content="Mi tarea final. Una Landing Page">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/89763280?v=4">
+
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="css/normalize.css" class="css">
+    <link rel="stylesheet" href="css/styles.css" class="css">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- fuentes/tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="body">
+    <!-- Header o primera diapositiva -->
+    <header class="diapo1">
+        <div class="header">
+
+            <!-- titulo -->
+            <div class="header__texto">
+                <h1 class="header__titulo">Nomade Digital</h1>
+                <p class="header__texto--descripcion">Disoñador Web</p>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="header__redes">
+                <p class="header__redes--texto">Conoce mis aventuras</p>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.whatsapp.com/"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://github.com/Huisti785"><i class='bx bxl-github'></i></a>
+            </div>
+
+            <!-- Boton -->
+            <div class="header__boton">
+                <a class="header__boton--texto" href="#diapo2">Cotizar Web</a>
+                <a class="header__boton--icon" href="#diapo2"><i class='bx bx-chevron-down icon'></i></a>
+            </div>
+        </div>
+    </header>
+    <!--Fin header-->
+
+    <!-- Formuario o segunda diapositiva -->
+    <section class="diapo2" id="diapo2">
+        <div class="cotizar contenedor">
+            <!-- Texto -->
+            <div class="cotizar__texto">
+                <h2 class="cotizar__texto--titulo"><i class='bx bx-world'></i> Cotizar Web</h2>
+                <p class="cotizar__texto--descripcion">Recuerda que mientras <span class="bold">mas especifico</span> seas en tu explicacion, el presupuesto
+                    tendra un <span class="bold">costo mas acotado</span> a tus necesidades y te lo podre enviar <span
+                        class="bold">mas rapido.</span></p>
+            </div>
+
+            <!-- Formulario -->
+            <div class="cotizar__formulario">
+                <form class="formulario" action="mailto:jezielandres@gmail.com" method="post"> <!--a.rivera61@alumnos.cst-->
+                    <div class="formulario__item">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="formulario__item">
+                        <label for="whatsapp">Whatsapp: </label>
+                        <input type="tel" name="whatsapp" placeholder="Tu numero de telefono / whatsapp" required>
+                    </div>
+
+                    <div class="formulario__item">
+                        <label for="email">Email: </label>
+                        <!-- https://www.w3schools.com/html/html_form_input_types.asp
+                        Segun esta pagina (y muchas otras), el tipo de input es "email", no "mail", como aparecia en pla clase... -->
+                        <input type="email" name="email" placeholder="Tu email / correo electronico" required>
+                    </div>
+
+                    <div class="formulario__item">
+                        <label for="tipo_web">Selecciona el tipo de web: </label>
+                        <select name="tipo_web" id="tipo_web" required>
+                            <option value="value1" selected>One page</option>
+                            <option value="value2">Corporativa</option>
+                            <option value="value3">e-Commerce</option>
+                            <option value="value4">e-Learning</option>
+                            <option value="value5">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="formulario__item">
+                        <label for="mensaje">Mensaje: </label>
+                        <textarea name="mensaje" cols="30" rows="10" placeholder="Hablame de las secciones de tu pagina y enumeralas (Inicio, Sobre mi, Servicio, Contacto, etc.), y sube un boceto de este, para tener una idea clara de lo que quieres 😄" required></textarea>
+                    </div>
+
+                    <div class="formulario__item">
+                        <label for="boceto">Sube un boceto de tu idea: </label>
+                        <input type="file" name="boceto" required>
+                    </div>
+
+                    <input class="boton bold" type="submit" value="Cotizar">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+</body>
+
+</html>
