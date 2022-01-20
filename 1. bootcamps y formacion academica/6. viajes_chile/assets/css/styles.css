@@ -16,9 +16,13 @@ p {
 /*======================
 -----------Nav-----------
 ======================*/
-
-.navbar {
+.transparente {
     background-color: transparent;
+}
+.negro {
+    background-color: #000;
+}
+.navbar {
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -31,6 +35,7 @@ p {
 }
 .nav-link {
     padding: .5rem;
+    opacity: 1;
 }
 /*======================
 -----------carousel-----------
@@ -47,5 +52,18 @@ p {
     font-size: 28px;
 }
 .presentacion__texto p {
+    font-weight: 300;
+}
+
+/*======================
+------------Destacados / cards----------
+======================*/
+.card img {
+    height: 172px;
+}
+.card-title {
+    font-weight: 400;
+}
+.card-text {
     font-weight: 300;
 }
