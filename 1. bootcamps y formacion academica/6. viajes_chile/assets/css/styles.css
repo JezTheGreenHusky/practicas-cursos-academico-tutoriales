@@ -7,6 +7,7 @@
 }
 body {
     background-color: #000;
+    font-family: 'Open Sans', sans-serif;
 }
 p {
     color: #fff;
@@ -66,4 +67,27 @@ p {
 }
 .card-text {
     font-weight: 300;
+}
+/*======================
+-----------formulario-----------
+======================*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    padding: .3rem 0rem;
+}
+.form_item {
+    margin: .5rem 0rem;
+}
+.tooltip-inner {
+    color: #fff;
+    background-color: var(--bs-info);
+    font-weight: 400;
+}
+.tooltip {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    opacity: 1 !important;
 }
