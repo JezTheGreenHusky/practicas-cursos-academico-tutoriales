@@ -5,6 +5,13 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #000;
+}
+p {
+    color: #fff;
+}
+
 
 /*======================
 -----------Nav-----------
@@ -32,4 +39,13 @@
     .carousel-item {
         max-height: 100vh;
     }
+}
+/*======================
+-----------presentacion-----------
+======================*/
+.presentacion__icono i {
+    font-size: 28px;
+}
+.presentacion__texto p {
+    font-weight: 300;
 }
