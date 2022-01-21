@@ -8,11 +8,14 @@
 body {
     background-color: #000;
     font-family: 'Open Sans', sans-serif;
+    color: #fff;
 }
 p {
     color: #fff;
 }
-
+a {
+    text-decoration: none;
+}
 
 /*======================
 -----------Nav-----------
@@ -90,4 +93,30 @@ form label {
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     opacity: 1 !important;
+}
+
+/*======================
+-----------footer-----------
+======================*/
+
+.footer__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    width: 70%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .footer__contenido {
+        flex-direction: row;
+    }
+}
+.redes-sociales i {
+    vertical-align: middle;
+    color: #fff;
+    font-size: 35px;
+    padding: 5px;
+    margin: 0px 2px;
 }
