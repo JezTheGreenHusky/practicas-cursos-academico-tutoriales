@@ -18,8 +18,27 @@ $(function () {
             scrollTop: $(numeral).offset().top -60 // 60->Tamaño del navbar
         }, 1000)
         
-        // $(".navbar").addClass('bg-info')
     });
+
+    /*
+    cambio de color segun el nivel de scroll:
+    var carousel = document.getElementById("carousel");
+    pixeles = carousel.clientHeight;
+    pixeles = parseInt(pixeles);
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() <= pixeles) {
+            $(".navbar").css({
+                "background-color": "transparent"
+            })
+
+        } else {
+            $(".navbar").css({
+                "background-color": "#0dcaf0"
+
+            })
+        }
+    */
 });
 
 // tooltipis bootstrap
