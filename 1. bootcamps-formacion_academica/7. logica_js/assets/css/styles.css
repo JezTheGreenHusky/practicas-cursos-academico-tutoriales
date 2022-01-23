@@ -1,0 +1,117 @@
+:root {
+    --blanco: #ffffff;
+    --negro: rgb(19, 19, 19);
+    --gris: #757575;
+    --primario: #00315f;
+    --secundario: #007780;
+    --azul: #00008d;
+    --verde: #007e00;
+
+    --f_header: 'PT Sans', sans-serif;
+    --f_parrafo: 'Open Sans', sans-serif;
+}
+
+/*======================
+-----------globales-----------
+======================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+header,
+section {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 1rem;
+}
+
+/*======================
+-----------utilidades-----------
+======================*/
+.size {
+    min-height: 100vh;
+}
+@media (min-width: 768px) {
+    #header,
+    #diagramas,
+    #operaciones_aritmeticas,
+    #convertor_temperatura,
+    #convertor_dias,
+    #suma_promedio {
+        scroll-snap-align: start !important;
+    }
+}
+/*======================
+------------Navegacion----------
+======================*/
+.nav_cont {
+    height: 100%;
+}
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.navegacion li{
+    padding: 1rem;
+}
+.navegacion a{
+    color: var(--blanco);
+    font-size: 25px;
+    border-bottom: 0px solid var(--blanco);
+    padding: 7px;
+}
+.navegacion a:hover{
+    border-bottom-width: 2px;
+    font-size: 27px;
+
+}
+
+/*======================
+-----------1. diagramas de flujo-----------
+======================*/
+.carousel-item img {
+    max-height: 100vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+/*======================
+-----------2. operaciones aritmeticas-----------
+======================*/
+#operaciones_aritmeticas th {
+    width: 14%;
+}
+
+/*======================
+-----------3. Convertor de temperatura-----------
+======================*/
+#convertor_temperatura th {
+    width: 25%;
+}
+/*======================
+-----------4. convertidor dias semanas años-----------
+======================*/
+#convertor_dias th {
+    width: 20%;
+}
+/*======================
+-----------5. suma y promedio-----------
+======================*/
+#suma_promedio th {
+    width: 25%;
+}
