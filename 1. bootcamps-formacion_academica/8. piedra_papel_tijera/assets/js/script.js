@@ -280,8 +280,8 @@ function barra_progreso(){
     // mostrar el resultado final
     if(ronda_actual == rondas_totales){
         // ocultar opciones al llegar al final del juego
-        $("#opciones_1").removeClass("d-block");
-        $("#opciones_1").addClass("d-none");
+        $("#opciones").removeClass("d-block");
+        $("#opciones").addClass("d-none");
 
         if(mi_puntaje < pc_puntaje){
             document.getElementById("resultado_final").innerHTML = `
