@@ -11,6 +11,8 @@ let pc_puntaje = 0;
 let barra_width_pc = 0;
 let barra_width_usuario = 0;
 let cont = 0;
+let seleccion_img_usuario = "";
+let seleccion_img_pc = "";
 
 /*======================
 -----------
@@ -59,6 +61,10 @@ function reinicio() {
     // reinicio boton
     $("#botones_reinicio").removeClass("d-block");
     $("#botones_reinicio").addClass("d-none");
+
+    // quitar la seleccion 
+    $("#seleccion_ronda").removeClass("d-block");
+    $("#seleccion_ronda").addClass("d-none");
 }
 
 /**
@@ -68,12 +74,15 @@ function reinicio() {
  */
 function eleccion_del_pc(pc_eleccion) {
     if (pc_eleccion === 0) {
+        seleccion_img_pc = "assets/img/piedra.svg";
         return "piedra";
     }
     else if (pc_eleccion === 1) {
+        seleccion_img_pc = "assets/img/papel.svg";
         return "papel";
     }
     else {
+        seleccion_img_pc = "assets/img/tijera.svg";
         return "tijera";
     }
 }
@@ -169,6 +178,17 @@ function resultado_tabla(){
     }
 };
 
+function mostrar_seleccion(){
+    //.setAttribute("src", newVal)
+
+    // mostar seccion
+    $("#seleccion_ronda").removeClass("d-none");
+    $("#seleccion_ronda").addClass("d-block");
+
+    document.getElementById("usuario_seleccion_img").setAttribute("src", seleccion_img_usuario);
+    document.getElementById("pc_seleccion_img").setAttribute("src", seleccion_img_pc);
+};
+
 
 /**
  * Se muestran los resultados de la ronda, tanto por numero, como por una barra de progreso
@@ -183,14 +203,35 @@ function resultado_parcial(){
     if(resultado === "Has ganado!"){
         $("#color_resultado").removeClass("text-danger");
         $("#color_resultado").addClass("text-success");
+
+        // cambia el color de fondo de la img de la seleccion
+        $(".seleccion_ronda_usuario").removeClass("bg-danger");
+        $(".seleccion_ronda_usuario").addClass("bg-success");
+
+        $(".seleccion_ronda_pc").removeClass("bg-success");
+        $(".seleccion_ronda_pc").addClass("bg-danger");
     }
     else if (resultado === "Has perdido"){
         $("#color_resultado").removeClass("text-success");
         $("#color_resultado").addClass("text-danger");
+
+        // cambia el color de fondo de la img de la seleccion
+        $(".seleccion_ronda_usuario").removeClass("bg-success");
+        $(".seleccion_ronda_usuario").addClass("bg-danger");
+
+        $(".seleccion_ronda_pc").removeClass("bg-danger");
+        $(".seleccion_ronda_pc").addClass("bg-success");
     }
     else{
         $("#color_resultado").removeClass("text-success");
         $("#color_resultado").removeClass("text-danger");
+
+        // cambia el color de fondo de la img de la seleccion
+        $(".seleccion_ronda_usuario").removeClass("bg-danger");
+        $(".seleccion_ronda_usuario").removeClass("bg-success");
+
+        $(".seleccion_ronda_pc").removeClass("bg-success");
+        $(".seleccion_ronda_pc").removeClass("bg-danger");
     }
 
 
@@ -205,6 +246,9 @@ function resultado_parcial(){
 
     // resultados en tablas
     resultado_tabla();
+
+    // seleccion de maquina y usuario
+    mostrar_seleccion();
 };
 
 
@@ -236,8 +280,8 @@ function barra_progreso(){
     // mostrar el resultado final
     if(ronda_actual == rondas_totales){
         // ocultar opciones al llegar al final del juego
-        $("#opciones").removeClass("d-block");
-        $("#opciones").addClass("d-none");
+        $("#opciones_1").removeClass("d-block");
+        $("#opciones_1").addClass("d-none");
 
         if(mi_puntaje < pc_puntaje){
             document.getElementById("resultado_final").innerHTML = `
@@ -337,16 +381,19 @@ $(function () {
 
     $("#piedra").click(function () {
         mi_eleccion = "piedra";
+        seleccion_img_usuario = "assets/img/piedra.svg";
         juego(mi_eleccion);
     });
 
     $("#papel").click(function () {
         mi_eleccion = "papel";
+        seleccion_img_usuario = "assets/img/papel.svg";
         juego(mi_eleccion);
     });
 
     $("#tijera").click(function () {
         mi_eleccion = "tijera";
+        seleccion_img_usuario = "assets/img/tijera.svg";
         juego(mi_eleccion);
     });
 

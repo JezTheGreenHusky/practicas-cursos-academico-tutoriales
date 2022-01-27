@@ -34,11 +34,29 @@ body {
 }
 
 .img_choice {
-    width: 50%;
-
+    width: 70%;
     padding: 1rem;
 }
+#opciones .row{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 
+.seleccion_ronda_pc,
+.seleccion_ronda_usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+    width: 45%;
+    margin: 0 auto;
+}
+#seleccion_ronda img {
+    width: 30%;
+}
 /*======================
 -----------resultados-----------
 ======================*/
