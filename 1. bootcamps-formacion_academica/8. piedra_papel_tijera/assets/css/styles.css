@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bs-info);
+}
+
+.contenido {
+    background-color: rgba(255, 255, 255, .5);
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*======================
+-----------opciones-----------
+======================*/
+
+.choice {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.choice:hover {
+    background-color: grey;
+}
+
+.img_choice {
+    width: 50%;
+
+    padding: 1rem;
+}
+
+/*======================
+-----------resultados-----------
+======================*/
+#resultado_final h2 {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 6%;
+}
