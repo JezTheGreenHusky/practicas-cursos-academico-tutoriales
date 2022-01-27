@@ -314,7 +314,7 @@ $(function () {
                 console.error("Numero ingresado no valido");
                 rondas_totales = parseInt(prompt("Ingresa un numero entre 0 y 20"));
 
-            } while (rondas_totales <= 0 || rondas_totales > 20);
+            } while ((rondas_totales <= 0 || rondas_totales > 20) || isNaN(rondas_totales));
         }
 
         // A JUGAR!!
