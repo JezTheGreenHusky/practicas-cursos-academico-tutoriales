@@ -174,9 +174,25 @@ function resultado_tabla(){
  * Se muestran los resultados de la ronda, tanto por numero, como por una barra de progreso
  */
 function resultado_parcial(){
+
     document.getElementById("result_parcial").innerHTML = `
-        Resultado parcial(Ronda ${ronda_actual}): ${resultado}
+        Resultado parcial(Ronda ${ronda_actual}): <span id="color_resultado" class="fw-bold">${resultado}</span>
     `;
+
+    // modificar el color del resultado
+    if(resultado === "Has ganado!"){
+        $("#color_resultado").removeClass("text-danger");
+        $("#color_resultado").addClass("text-success");
+    }
+    else if (resultado === "Has perdido"){
+        $("#color_resultado").removeClass("text-success");
+        $("#color_resultado").addClass("text-danger");
+    }
+    else{
+        $("#color_resultado").removeClass("text-success");
+        $("#color_resultado").removeClass("text-danger");
+    }
+
 
     document.getElementById("mi_puntaje").innerHTML = `
         Puntaje: ${mi_puntaje} / ${ronda_actual}
