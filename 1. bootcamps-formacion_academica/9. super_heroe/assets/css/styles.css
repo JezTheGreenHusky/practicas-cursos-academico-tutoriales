@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+body {
+    color: black;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*======================
+-----------barra de navegacion-----------
+======================*/
+.barra__contenido {
+    padding: 10px 0px;
+}
+.barra__contenido,
+.barra__contenido nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.barra__contenido li a {
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.barra__contenido li a:hover {
+    font-size: 21px;
+    border-bottom: 2px solid white;
+}
+
+@media (min-width: 768px) {
+    .barra__contenido,
+    .barra__contenido nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+}
+.logo img{
+    max-height: 60px;
+    width: auto;
+}
+
+/*======================
+-----------HERO-----------
+======================*/
+header {
+    height: 100vh;
+}
+
+.hero {
+    margin: 5% auto;
+    height: 70%;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+}
+.hero div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.hero h3 {
+    font-size: 500;
+}
+
+/*======================
+-----------buscador-----------
+======================*/
+.buscador {
+    margin: 30px auto;
+    padding: 15px;
+    width: 95%;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 1rem;
+}
+@media (min-width: 992px) {
+    .buscador {
+        width: 65%;
+    }
+}
+#resultados_busqueda {
+    display: none;
+}
+
+/*======================
+-----------info-----------
+======================*/
+#hero-info {
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/*======================
+-----------grafico-----------
+======================*/
+
+/*
+zona oculta y JS
+*/
+
+#seccion_grafico,
+#hero-info {
+    opacity: 0;
+}
+
+#grafico1 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    #grafico1 {
+        width: 90%;
+    }
+}
+@media (min-width: 992px) {
+    #grafico1 {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+#seccion_grafico i {
+    cursor: pointer;
+    color: black;
+    padding: 5px 10px;
+}
+
+#seccion_grafico i:hover {
+    color: rgb(255, 0, 60);
+}
