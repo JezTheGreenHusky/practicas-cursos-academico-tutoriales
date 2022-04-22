@@ -1,97 +1,78 @@
-/*
-var nombre = "jez";
-var apellido = 'C';
-var edad = 24;
+/**
+ * Numero de namos para calcular el PromedioFInal
+ * {@link promedioFinal} 
+ */
+let numero_ramos = 0;
 
-console.log(`Nombre: ${nombre}\nApellido: ${apellido}\nEdad: ${edad}`);
-*/
+/**
+ * Suma de los promedios, para calcular el promedio final
+ * {@link promedioFinal}
+ */
+let sumaTotal = 0;
 
+document.getElementById("btn-inicio").addEventListener("click", (boton) => {
+    boton.preventDefault();
 
-/*
+    /*
+        PARTE 1: SOLICITUD DE RAMOS Y NUMERP DE NOTAS
+    */
+    let ramo = document.getElementById("ramo").value;
+    numero_ramos++;
+    let numeroNotas = parseInt(document.getElementById("nNotas").value);
 
-    PARTE 1: SOLICITUD DE NOMBRE Y CARRERA
-*/
-var nombre = prompt("Ingresa tu nombre", '');
-var carrera = prompt("Ingresa la carrera", '');
+    let container = document.getElementById("tablas");
 
-document.getElementById(`name`).innerHTML += `
-    ${nombre}
-`;
+    container.innerHTML += `
+        <table class="table table-bordered p-3 table-dark">
+            <thead>
+                <tr>
+                    <th class="text-center fs-4" colspan="${numeroNotas}">${ramo}</th>
+                </tr>
+                <tr>
+                    <th>Numero</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
 
-document.getElementById(`car`).innerHTML += `
-    ${carrera}
-`;
+            <tbody id="cuerpo-tabla-${ramo}">
+            </tbody>
 
-/*
-    PARTE 2: SOLICITUD DE CANTIDAD DE RAMOS
-*/
-var ramos = []; // aqui se almacenaran los inputs
+            <tfoot>
+                <tr>
+                    <th>Promedio final</th>
+                    <th id="promedio-final-${ramo}"></th>
+                </tr>
+            </tfoot>
+        </table>
+    `;
 
-var num_ram = prompt("Ingresa el numero de ramos que quieres agregar", '3');
-num_ram = parseInt(num_ram)
-var contador = 1;
-while(contador != num_ram + 1) {
-    var ramo = prompt(`Ingresa el nombre del ramo ${contador}`, '');
-    ramos.push(ramo);
-    contador += 1;
-};
+    let contador = 0;
+    let suma = 0;
+    while (contador != numeroNotas) {
+        let nota = parseInt(prompt(`Ingresa la nota ${contador + 1} del ramo ${ramo}`));
 
-/* 
-    PARTE 3: SOLICITUD DE NOTAS
-*/
-var notas_todas = [];
+        suma += nota;
 
-var num_total_notas = prompt("Ingresa el numero de notas por cada ramo: ", '3');
-num_total_notas = parseInt(num_total_notas);
+        document.getElementById(`cuerpo-tabla-${ramo}`).innerHTML += `
+            <tr>
+                <td>${contador + 1}</td>
+                <td>${nota}</td>
+            </tr>
+        `;
 
-// agregar las filas
-ramos.forEach(ramo => {
-    document.getElementById('cuerpo-tabla').innerHTML += `
-        <tr id="row__${ramo}">
-            <td>${ramo}</td>
-        </tr>
-  `;
+        contador++
+    }
+
+    let promedio = suma / numeroNotas;
+
+    sumaTotal += promedio;
+    /**
+     * Promedio Final: promedio de los promedios de cada ramo
+     */
+    let promedioFinal = sumaTotal / numero_ramos;
+
+    // Impresion de resultados
+    document.getElementById(`promedio-final-${ramo}`).innerHTML = promedio.toFixed(2);
+
+    document.getElementById("PromedioFinal").innerHTML = `Promedio Final: ${promedioFinal.toFixed(2)}`;
 });
-
-// debe estar fuera del loop, para que no se reinicie
-var promedio_fin = 0;
-ramos.forEach(ramo => {
-    var num = 1;
-    var notas = [];
-    while (notas.length != num_total_notas) {
-
-        var nota = prompt(`Ingresa la nota ${num} del ramo ${ramo}`);
-        notas.push(nota);
-
-        console.log(notas)
-        num += 1;
-    };
-
-    // Se agregan las notas de 1 namo a la lista de todas la notas
-    notas_todas.push(notas);
-
-    suma = 0;
-    notas.forEach(nota => {
-        document.getElementById(`row__${ramo}`).innerHTML += `
-            <td>${nota}</td>
-        `;
-
-        nota = parseInt(nota);
-        suma += nota
-    });
-
-    console.log(nota);
-    // al final se agrega el promedio
-    var promedio = suma / num_total_notas;
-    promedio_fin += promedio;
-    document.getElementById(`row__${ramo}`).innerHTML += `
-            <td>${promedio}</td>
-        `;
-});
-
-
-// fin del loop; calculo promedio final
-promedio_fin = promedio_fin / ramos.length;
-document.getElementById(`promedio-final`).innerHTML += `
-            ${promedio_fin.toFixed(2)}
-        `;
