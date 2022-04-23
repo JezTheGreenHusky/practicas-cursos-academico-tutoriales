@@ -9,7 +9,7 @@ $(function () {
         $('#navegacion').addClass("negro");
     })
 
-    // Cambio de color con botones
+    // cambio tamaño por el navbar
 
     $(".nav-link").click(function(){
         var numeral=this.hash
@@ -19,26 +19,6 @@ $(function () {
         }, 1000)
         
     });
-
-    /*
-    cambio de color segun el nivel de scroll:
-    var carousel = document.getElementById("carousel");
-    pixeles = carousel.clientHeight;
-    pixeles = parseInt(pixeles);
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() <= pixeles) {
-            $(".navbar").css({
-                "background-color": "transparent"
-            })
-
-        } else {
-            $(".navbar").css({
-                "background-color": "#0dcaf0"
-
-            })
-        }
-    */
 });
 
 // tooltipis bootstrap
