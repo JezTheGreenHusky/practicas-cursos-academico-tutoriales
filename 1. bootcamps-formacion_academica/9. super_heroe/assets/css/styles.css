@@ -37,7 +37,7 @@ html {
     font-weight: 700;
     color: white;
     font-size: 20px;
-    padding-bottom: 5px;
+    padding: 5px 0px;
 }
 .barra__contenido li a:hover {
     font-size: 21px;
@@ -48,7 +48,7 @@ html {
     .barra__contenido,
     .barra__contenido nav ul {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         gap: 2rem;
     }
 }
@@ -94,7 +94,7 @@ header {
 
 }
 .hero h3 {
-    font-size: 500;
+    font-weight: 400;
 }
 
 /*======================
