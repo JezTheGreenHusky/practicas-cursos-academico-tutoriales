@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +11,7 @@
     <meta name="author" content="Jez, The Green Husky">
     <meta property="og:image" content="https://jezthegreenhusky.github.io/practicas-cursos-academico-tutoriales/1.%20bootcamps-formacion_academica/2.%20suricata/assets/img/empanadas.webp">
 
+    <link rel="shortcut icon" href="assets/img/icon.jpg" type="image/jpg">
 
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,10 +29,9 @@
 </head>
 
 <body>
-
     <header>
         <nav class="navbar navbar-expand-sm">
-            <div class="container mx-3 mx-md-auto">
+            <div class="container mx-3 mx-auto">
                 <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="logo"></a>
                 <button class="navbar-light navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,155 +54,304 @@
         </nav>
     </header>
 
-    <section class="productos">
-        <h1 class="productos__titulo">Nuestros Productos</h1>
-
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/img/colaciones.webp" class="card-img-top" alt="colaciones">
-                    <div class="card-body">
-                        <h5 class="card-title">Colaciones</h5>
-                        <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <main>
+        <section class="productos">
+            <h1 class="productos__titulo">Nuestros Productos</h1>
+    
+            <div id="carouselExampleIndicators" class="carousel carousel-dark slide d-sm-none" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <img src="assets/img/colaciones.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Colaciones</h5>
+                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Ver más</a>
-                        <a href="#" class="card-link">Comprar</a>
+
+                    <!-- 2 carousel item -->
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="assets/img/desayunos.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Desayunos</h5>
+                                <p class="card-text">Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 carousel item -->
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="assets/img/bebidas.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Bebidas</h5>
+                                <p class="card-text">Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 carousel item -->
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="assets/img/verduras.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Verduras</h5>
+                                <p class="card-text">Ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 5 carousel item -->
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="assets/img/dulces.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Dulces</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 carousel item -->
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="assets/img/empanadas.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Empanadas</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- PRODUCTOS EN >500px -->
+            <div class="d-none d-sm-block" id="productosCelular">
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <div class="card">
+                            <img src="assets/img/colaciones.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Colaciones</h5>
+                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- 2 -->
+        
+                    <div class="col-6 col-md-4">
+                        <div class="card">
+                            <img src="assets/img/desayunos.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Desayunos</h5>
+                                <p class="card-text">Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- 3 -->
+        
+                    <div class="col-6 col-md-4">
+                        <div class="card">
+                            <img src="assets/img/bebidas.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Bebidas</h5>
+                                <p class="card-text">Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+
+                    <div class="col-6 col-md-4">
+                        <div class="card">
+                            <img src="assets/img/verduras.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Verduras</h5>
+                                <p class="card-text">Ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- 5 -->
+        
+                    <div class="col-6 col-md-4">
+                        <div class="card">
+                            <img src="assets/img/dulces.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Dulces</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- 6 -->
+        
+                    <div class="col-6 col-md-4">
+                        <div class="card">
+                            <img src="assets/img/empanadas.webp" class="card-img-top" alt="colaciones">
+                            <div class="card-body">
+                                <h5 class="card-title">Empanadas</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link btn btn-info text-white">Ver más</a>
+                                <a href="#" class="card-link btn btn-info text-white">Comprar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- 2 -->
-
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/img/desayunos.webp" class="card-img-top" alt="colaciones">
-                    <div class="card-body">
-                        <h5 class="card-title">Desayunos</h5>
-                        <p class="card-text">Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Ver más</a>
-                        <a href="#" class="card-link">Comprar</a>
-                    </div>
-                </div>
+        </section>
+    
+        <!-- metodos de pago -->
+    
+        <section class="metodo-pago d-none d-md-flex">
+            <div class="tarjetas-desc">
+                <p>Ahora aceptamos </p>
             </div>
-
-            <!-- 3 -->
-
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/img/bebidas.webp" class="card-img-top" alt="colaciones">
-                    <div class="card-body">
-                        <h5 class="card-title">Bebidas</h5>
-                        <p class="card-text">Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Ver más</a>
-                        <a href="#" class="card-link">Comprar</a>
-                    </div>
-                </div>
+    
+            <div class="tarjetas">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-diners-club"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-discover"></i>
             </div>
-        </div>
-
-        <!-- 2 row -->
-
-        <div class="row">
-            <!-- 4 -->
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/img/verduras.webp" class="card-img-top" alt="colaciones">
-                    <div class="card-body">
-                        <h5 class="card-title">Verduras</h5>
-                        <p class="card-text">Ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Ver más</a>
-                        <a href="#" class="card-link">Comprar</a>
-                    </div>
-                </div>
+        </section>
+    
+        <!-- footer -->
+    
+        <footer>
+            <img class="mx-auto d-block" src="assets/img/logo-footer.png" alt="logo footer">
+    
+            <div>
+                <p>Hecho con 💚 por <a href="https://github.com/JezTheGreenHusky" target="_blank">Jez, The Green Husky <i class="fas fa-paw"></i></a></p>
             </div>
-
-            <!-- 5 -->
-
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/img/dulces.webp" class="card-img-top" alt="colaciones">
-                    <div class="card-body">
-                        <h5 class="card-title">Dulces</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Ver más</a>
-                        <a href="#" class="card-link">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6 -->
-
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/img/empanadas.webp" class="card-img-top" alt="colaciones">
-                    <div class="card-body">
-                        <h5 class="card-title">Empanadas</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Ver más</a>
-                        <a href="#" class="card-link">Comprar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- metodos de pago -->
-
-    <section class="metodo-pago d-none d-md-flex">
-        <div class="tarjetas-desc">
-            <p>Ahora aceptamos </p>
-        </div>
-
-        <div class="tarjetas">
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-amex"></i>
-            <i class="fab fa-cc-diners-club"></i>
-            <i class="fab fa-cc-paypal"></i>
-            <i class="fab fa-cc-discover"></i>
-        </div>
-    </section>
-
-    <!-- footer -->
-
-    <footer>
-        <img class="mx-auto d-block" src="assets/img/logo-footer.png" alt="logo footer">
-    </footer>
+        </footer>
+    </main>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

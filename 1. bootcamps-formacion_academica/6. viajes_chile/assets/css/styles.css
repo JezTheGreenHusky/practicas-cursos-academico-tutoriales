@@ -61,6 +61,10 @@ a {
 /*======================
 ------------Destacados / cards----------
 ======================*/
+.card {
+    margin: .8rem auto;
+    width: 80%;
+}
 .card img {
     height: 172px;
 }
@@ -69,6 +73,12 @@ a {
 }
 .card-text {
     font-weight: 300;
+}
+@media (min-width: 768px) {
+    .card {
+        margin: .8rem .5rem;
+        width: 100%;
+    }
 }
 /*======================
 -----------formulario-----------
@@ -118,4 +128,23 @@ form label {
     font-size: 35px;
     padding: 5px;
     margin: 0px 2px;
+}
+
+.jez {
+    background-color: #2e2e2e;
+}
+.jez p {
+    margin: 0;
+    color: #fff;
+    padding: 2rem 3rem;
+    text-align: center;
+    font-size: 16px;
+}
+.jez a {
+    color: #00ad00;
+    padding: .5rem 0rem;
+}
+.jez a:hover {
+    color: #008100;
+    border-bottom: 1px solid white;
 }

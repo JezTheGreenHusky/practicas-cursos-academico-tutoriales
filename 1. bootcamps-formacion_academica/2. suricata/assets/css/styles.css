@@ -1,57 +1,96 @@
+:root {
+    --rosa: #e83e8c;
+    --celeste: #17A2B8;
+
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #707070;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
-
+a {
+    text-decoration: none;
+}
 body {
     font-family: 'Open Sans', sans-serif;;
 }
 
 
 .navbar {
-    background-color: #e83e8c;
+    background-color: var(--rosa);
 }
 .navbar-brand img {
     width: 132px;
+    padding: 0rem .5rem;
 }
-
+.navbar-brand a {
+    padding: 0rem .8rem;
+}
 #navbarNav {
     justify-content: end;
 }
 .nav-link {
-    color: #fff;
-    font-size: 16px;
+    color: var(--blanco);
+    font-size: 1rem;
     font-weight: 400;
 }
-
+@media (min-width: 768px) {
+    .nav-link {
+        font-size: 1.2rem;
+    }
+}
 /*======================
------------productos-----------
+-----------
+Productos
+-----------
 ======================*/
 .productos__titulo {
-    font-size: 60px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    color: #707070;
+    color: var(--gris);
+    padding: 0rem .8rem;
 
     margin-top: 41px;
     margin-bottom: 29px;
 }
-
 @media (min-width: 768px) {
     .productos__titulo {
-        margin-top: 64px;
-        margin-bottom: 77px;
+        font-size: 3.2rem;
+        padding: 0;
     }
 }
+/*CAROUSEL*/
+#carouselExampleIndicators button{
+    background-color: var(--gris);
+}
+
+#carouselExampleIndicators .carousel-control-prev,
+#carouselExampleIndicators .carousel-control-next{
+    background-color: transparent;
+    color: var(--gris);
+}
+.carousel-item {
+    padding-bottom: 1rem;
+}
+#carouselExampleIndicators .card {
+    width: 75%;
+    margin: 2rem auto;
+}
+
+#productosCelular .card {
+    margin: 2rem auto;
+    width: auto;
+}
+
 
 .row {
     margin-bottom: 64px; /*118*/
     margin: 0 auto;
     width: 90%;
-}
-
-.card {
-    margin: 2rem auto;
 }
 
 .card-title {
@@ -65,14 +104,36 @@ body {
     font-weight: 400;
 }
 .card-text {
-    height: 180px;
+    min-height: 130px;
+}
+.card-link:hover {
+    background-color: var(--rosa);
+    border: none;
+}
+@media (min-width: 768px) {
+    .productos__titulo {
+        margin-top: 64px;
+        margin-bottom: 77px;
+    }
+
+    .card-text {
+        min-height: 200px;
+    }
+}
+@media (min-width: 1200px) {
+    .card-text {
+        min-height: 150px;
+    }
 }
 /*======================
------------pago/ tarjetas-----------
+-----------
+pago/ tarjetas
+-----------
 ======================*/
 .metodo-pago {
     margin-top: 54px;
-    background-color: #17A2B8;
+    padding: 0rem 1rem;
+    background-color: var(--celeste);
     height: 170px;
 
     gap: 4rem;
@@ -80,7 +141,7 @@ body {
     vertical-align: middle;
     justify-content: center;
 
-    color: #fff;
+    color: var(--blanco);
     font-size: 40px;
     font-weight: 700;
 }
@@ -97,6 +158,11 @@ body {
     font-size: 55px;
 }
 
+/*======================
+-----------
+FOOTER
+-----------
+======================*/
 footer {
     background-color: #e83e8c;
     height: 184px;
@@ -105,6 +171,24 @@ footer {
 
 footer img {
     width: 53px;
-    padding: 53px 0;
+    padding: 53px 0 15px 0;
 
+}
+
+footer div {
+    background-color: #2e2e2e;
+}
+footer div p {
+    margin: 0;
+    color: var(--blanco);
+    padding: 2rem 3rem;
+    text-align: center;
+}
+footer div a {
+    color: #00ad00;
+    padding: .5rem 0rem;
+}
+footer div a:hover {
+    color: #008100;
+    border-bottom: 1px solid white;
 }

@@ -1,0 +1,45 @@
+/*======================
+-----------
+HEADER
+-----------
+======================*/
+header {
+    display: flex;
+    justify-content: center;
+}
+header p {
+    font-size: 16px;
+    padding: 0rem 1rem;
+}
+
+@media (min-width: 768px) {
+    header p {
+        font-size: 22px;
+    }
+}
+
+/*======================
+-----------
+Form
+-----------
+======================*/
+.form,
+.tablas {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: rgba(0, 255, 255, .5);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.form-item {
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .form,
+    .tablas {
+        width: 90%;
+    }
+}
